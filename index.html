@@ -108,8 +108,15 @@
     letter-spacing:-.015em;margin-bottom:24px;
   }
   h1 em{font-style:italic;color:var(--sage-deep)}
-  .lede{font-size:1.12rem;color:var(--ink-soft);max-width:38ch;margin-bottom:30px}
+  .lede{font-size:1.12rem;color:var(--ink-soft);max-width:38ch;margin-bottom:22px}
   .lede strong{color:var(--ink);font-weight:600}
+  .jobmarket{
+    font-size:.98rem;color:var(--ink);max-width:42ch;margin-bottom:30px;
+    background:rgba(176,137,77,.1);border:1px solid rgba(176,137,77,.3);
+    border-radius:4px;padding:14px 18px;line-height:1.55;
+  }
+  .jobmarket a{color:var(--sage-deep);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+  .jobmarket a:hover{color:var(--ink)}
   .actions{display:flex;gap:14px;flex-wrap:wrap}
   .btn{
     display:inline-flex;align-items:center;gap:8px;
@@ -162,6 +169,7 @@
   .theme p{font-size:.92rem;color:var(--ink-soft);line-height:1.6}
 
   .future{margin-top:50px;padding-top:38px;border-top:1px solid var(--line)}
+  .future-lede{font-size:1.02rem;color:var(--ink-soft);max-width:64ch;margin:0 0 26px;line-height:1.6}
   .future-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:6px}
   .fcard{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:22px 20px;transition:border-color .2s,transform .2s}
   .fcard:hover{border-color:var(--moss);transform:translateY(-3px)}
@@ -253,6 +261,22 @@
   .awd .at{font-size:.92rem;color:var(--ink-soft)}
   .subhead{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:16px}
 
+  /* ---- LIFE / GALLERY ---- */
+  .life-lede{font-size:1.05rem;color:var(--ink-soft);max-width:60ch;margin-bottom:34px}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .gphoto{position:relative;border-radius:3px;overflow:hidden;background:var(--paper);border:1px solid var(--line);aspect-ratio:4/3}
+  .gphoto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .gphoto:hover img{transform:scale(1.05)}
+  .gphoto .cap{
+    position:absolute;left:0;right:0;bottom:0;padding:16px 14px 10px;
+    background:linear-gradient(to top,rgba(38,49,43,.78),transparent);
+    color:#fff;font-size:.82rem;font-weight:500;letter-spacing:.02em;
+    opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s;
+  }
+  .gphoto:hover .cap{opacity:1;transform:none}
+  .gphoto.placeholder{display:flex;align-items:center;justify-content:center;border-style:dashed}
+  .gphoto.placeholder span{font-size:.8rem;color:var(--ink-soft);text-align:center;padding:0 12px;line-height:1.4}
+
   /* ---- FOOTER ---- */
   footer{border-top:1px solid var(--line);padding:48px 0;margin-top:8px}
   .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
@@ -271,6 +295,7 @@
     .portrait{max-width:300px;order:-1}
     .about-grid,.two{grid-template-columns:1fr;gap:34px}
     .themes,.future-grid{grid-template-columns:1fr;gap:22px}
+    .gallery{grid-template-columns:repeat(2,1fr)}
     .navlinks{display:none}
     .navlinks.open{
       display:flex;flex-direction:column;position:absolute;top:62px;left:0;right:0;
@@ -296,6 +321,7 @@
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#talks">Talks &amp; Awards</a>
+      <a href="#life">Life</a>
     </div>
   </div>
 </nav>
@@ -307,9 +333,11 @@
         <div class="eyebrow">Biostatistics · Harvard Chan School</div>
         <h1>Haoyu Yang<br></h1>
         <p class="lede">Postdoctoral Research Fellow building statistical methods for <strong>causal inference</strong> and <strong>large-scale association studies</strong> — integrating AI generative models with rigorous statistical frameworks to uncover biomarkers and disease mechanisms.</p>
+        <p class="jobmarket">Currently, I'm on the job market. Please don't hesitate to <a href="mailto:haoyuyang@hsph.harvard.edu">contact me</a> if you are interested in my research or would like to share any ideas 🥳!</p>
         <div class="actions">
           <a class="btn btn-solid" href="mailto:haoyuyang@hsph.harvard.edu">Email me</a>
           <a class="btn btn-ghost" href="https://scholar.google.com/citations?hl=en&user=8uUDqVkAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Google Scholar ↗</a>
+          <a class="btn btn-ghost" href="assets/Haoyuyang_CV.pdf" target="_blank" rel="noopener">CV ↗</a>
         </div>
       </div>
       <div class="portrait reveal">
@@ -456,9 +484,19 @@
         <div class="awd"><span class="yr">2020</span><span class="at">First Prize, "BeiGene" Excellent Paper for Youth</span></div>
         <div class="subhead" style="margin-top:30px">Service</div>
         <div class="awd"><span class="at">Journal reviewer — <em>Biostatistics</em>, <em>Journal of Data Science</em></span></div>
-        <div class="subhead" style="margin-top:30px">Beyond the Data</div>
-        <div class="awd"><span class="at">When I'm not chasing causal pathways, I'm chasing fall lines — winters mean skiing wherever the snow is good. The rest of the year you'll find me on the tennis court trading baseline rallies, and I'm a firm believer that the best ideas show up mid-workout, somewhere around the last set.</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="life">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Beyond the Data</h2></div>
+    <p class="life-lede reveal">When I'm not chasing causal pathways, I'm chasing fall lines — winters mean skiing wherever the snow is good. The rest of the year you'll find me on the tennis court trading baseline rallies, and I'm a firm believer that the best ideas show up mid-workout, somewhere around the last set.</p>
+    <div class="gallery reveal">
+      <div class="gphoto placeholder"><span>Add a skiing photo<br>(assets/life-ski.jpg)</span></div>
+      <div class="gphoto placeholder"><span>Add a tennis photo<br>(assets/life-tennis.jpg)</span></div>
+      <div class="gphoto placeholder"><span>Add another photo<br>(assets/life-3.jpg)</span></div>
     </div>
   </div>
 </section>
@@ -470,6 +508,7 @@
       <div class="links">
         <a href="mailto:haoyuyang@hsph.harvard.edu">Email</a>
         <a href="https://scholar.google.com/citations?hl=en&user=8uUDqVkAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="assets/Haoyuyang_CV.pdf" target="_blank" rel="noopener">CV</a>
       </div>
     </div>
     <p class="copy">© <span id="yr"></span> Haoyu Yang · Harvard T.H. Chan School of Public Health, Biostatistics</p>
