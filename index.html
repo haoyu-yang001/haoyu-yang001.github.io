@@ -292,6 +292,21 @@
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
 
+  /* ---- CURSOR TRAIL ---- */
+  .trail-dot{
+    position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;
+    background:radial-gradient(circle,var(--sage) 0%,var(--moss) 70%,transparent 100%);
+    pointer-events:none;z-index:9999;
+    transform:translate(-50%,-50%);will-change:transform,opacity;
+    mix-blend-mode:multiply;
+  }
+  @media(hover:none),(pointer:coarse){
+    .trail-dot{display:none !important}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .trail-dot{display:none !important}
+  }
+
   @media(max-width:860px){
     .hero{grid-template-columns:1fr;gap:42px}
     .portrait{max-width:300px;order:-1}
@@ -580,6 +595,45 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // cursor trail — a string of fading green dots following the pointer
+  (function(){
+    const fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+    const reduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    if(!fine || reduced) return;
+
+    const N = 14;                 // number of dots in the tail
+    const dots = [];
+    for(let i=0;i<N;i++){
+      const d = document.createElement('div');
+      d.className = 'trail-dot';
+      document.body.appendChild(d);
+      dots.push({el:d, x:0, y:0});
+    }
+    let mx = window.innerWidth/2, my = window.innerHeight/2, active = false;
+    window.addEventListener('mousemove', e=>{ mx = e.clientX; my = e.clientY; active = true; }, {passive:true});
+
+    function tick(){
+      let px = mx, py = my;
+      for(let i=0;i<N;i++){
+        const d = dots[i];
+        // each dot eases toward the one ahead of it -> trailing string
+        d.x += (px - d.x) * 0.32;
+        d.y += (py - d.y) * 0.32;
+        const t = 1 - i/N;                       // head = 1, tail = ~0
+        const scale = active ? (0.3 + t*0.7) : 0;
+        d.el.style.transform = `translate(${d.x}px, ${d.y}px) translate(-50%,-50%) scale(${scale})`;
+        d.el.style.opacity = active ? (t*0.55).toFixed(3) : 0;
+        px = d.x; py = d.y;
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    // hide when the pointer leaves the window
+    document.addEventListener('mouseleave', ()=>{ active = false; });
+    document.addEventListener('mouseenter', ()=>{ active = true; });
+  })();
 </script>
 </body>
 </html>
