@@ -408,38 +408,38 @@
 <section id="research">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">03</span><h2>Research</h2></div>
-    <p class="research-lede reveal">Four kinds of information routinely go unused in biomedical research — in the samples we never measured, in the populations we set aside, in the multiplicity of large-scale testing, and in the design of the study itself. I build one line of work for each, tied together by a single guarantee: <strong>borrowing strength must never cost you the error rate.</strong></p>
+    <p class="research-lede reveal">Biomedical research routinely discards four critical sources of information: unmeasured samples, excluded populations, the hidden structure of large-scale testing, and the study’s own design. My research builds methodological frameworks for each, united by a single guarantee: <strong>borrowing strength must never cost you the error rate.</strong></p>
 
     <div class="themes themes-4 reveal">
       <div class="theme">
         <div class="theme-num">01 · Multiplicity</div>
-        <h3>The ensemble is the resource</h3>
-        <p>When a study runs half a million tests, the ensemble of statistics is enormously informative about which hypotheses are true. I turn the multiplicity — usually only a cost to be corrected for — into the thing that makes the test nearly optimal.</p>
-        <span class="m">M-DACT · Tail likelihood ratio test</span>
+        <h3>Multiplicity is a blessing.</h3>
+        <p>When a study runs half a million tests, the ensemble of statistics is enormously informative about which hypotheses are true. I turn the multiplicity into the thing that makes the test nearly optimal.</p>
+        <span class="m">M-DACT &amp; Tail likelihood ratio test</span>
       </div>
       <div class="theme">
         <div class="theme-num">02 · Synthetic data</div>
-        <h3>Use the AI without trusting it</h3>
-        <p>Ninety percent of a biobank has no proteomic assay, but complete genotypes and records. Rather than substituting predictions for data, I model them jointly inside a mixed model — so misspecification costs power, never validity.</p>
+        <h3>AI-generated data is Useful, not necessarily true.</h3>
+        <p>90% of a biobank has no proteomic assay but complete genotypes and records. Rather than substituting predictions for data, I model them jointly inside a mixed model — AI model misspecification costs power, never validity.</p>
         <span class="m">Syn-PALM</span>
       </div>
       <div class="theme">
         <div class="theme-num">03 · Populations</div>
-        <h3>Borrow strength, keep the error rate</h3>
+        <h3>Borrow strength across heterogeneous populations without compromising error rate guarantees.</h3>
         <p>A minority cohort is underpowered while a cohort a hundred times larger sits beside it. Pooling naively is worse than not borrowing at all; I decompose the target null instead of assuming transportability away.</p>
         <span class="m">HEART-GWAS</span>
       </div>
       <div class="theme">
         <div class="theme-num">04 · Design</div>
-        <h3>Decide what the data can say</h3>
-        <p>Before anyone is enrolled, the design fixes how much a study will ever reveal. Covariate-adaptive randomization that works one patient at a time, and causal inference when one unit's outcome depends on another's treatment.</p>
-        <span class="m">Adaptive randomization · Interference</span>
+        <h3>Decide how data can be collected.</h3>
+        <p>Before anyone is enrolled, the design fixes how much a study will ever reveal. Covariate-adaptive randomization and design strategies for networked experiments help to get better treatment assignment.</p>
+        <span class="m">Adaptive randomization &amp; Network interference</span>
       </div>
     </div>
 
     <div class="creed reveal">
       <p class="q">&ldquo;The auxiliary information is allowed to be arbitrarily wrong.&rdquo;</p>
-      <p class="a">This is the rule I hold myself to in every project. Validity — type I error, false discovery rate, unbiasedness for the target estimand — is established <strong>by derivation</strong>, never inherited from an assumption that the model, the borrowed population, or the imputation happens to be correct. Accuracy buys power, and nothing else. The result is a guarantee worth stating plainly: <strong>provably never worse</strong> than the classical analysis that throws the extra information away, and strictly better whenever that information is real.</p>
+      <p class="a">This is the rule I hold myself to in my project. Validity — type I error, false discovery rate, unbiasedness for the target estimand — is established <strong>by derivation</strong>, never inherited from an assumption that the model, the borrowed population, or the imputation happens to be correct. Accuracy buys power, and nothing else. The result is a guarantee worth stating plainly: <strong>provably never worse</strong> than the classical analysis that throws the extra information away, and strictly better whenever that information is real.</p>
     </div>
 
     <div class="interests reveal">
@@ -450,10 +450,8 @@
           <span class="tag">Large-scale Composite-null Testing</span>
           <span class="tag">Cross-population Transfer Learning</span>
           <span class="tag">Causal Mediation Analysis</span>
-          <span class="tag">Sparse-GRM Linear Mixed Models</span>
           <span class="tag">Covariate-adaptive Randomization</span>
           <span class="tag">Causal Inference under Interference</span>
-          <span class="tag">Multiple Imputation &amp; Variable Selection</span>
         </div>
       </div>
       <div class="icol">
@@ -463,8 +461,6 @@
           <span class="tag">Proteomics &amp; pQTL Discovery</span>
           <span class="tag">Epigenome-wide Studies</span>
           <span class="tag">Population Biobanks</span>
-          <span class="tag">Health Equity in Genomics</span>
-          <span class="tag">Whole-genome Sequencing</span>
           <span class="tag">Clinical Trials</span>
           <span class="tag">Networked &amp; Economic Experiments</span>
         </div>
@@ -472,7 +468,7 @@
     </div>
     <div class="future reveal">
       <div class="subhead">Where I'm headed</div>
-      <p class="future-lede">Over the next five years I want to build a general theory, and a usable software stack, for turning imperfect auxiliary information into valid scientific discovery — together with adversarial benchmarks, because this literature still has no shared standard for demonstrating that a method fails <em>safely</em>.</p>
+      <p class="future-lede">Over the next five years I want to build a general theory, and a usable software stack, <strong>for turning imperfect auxiliary information into valid scientific discovery</strong> — together with adversarial benchmarks, because this literature still has no shared standard for demonstrating that a method fails <em>safely</em>.</p>
       <div class="future-grid">
         <div class="fcard">
           <h4>Mediation with AI-generated mediators</h4>
