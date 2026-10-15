@@ -255,6 +255,7 @@
   .fcard.sw{display:flex;flex-direction:column}
   .fcard.sw h4 a{color:inherit;text-decoration:none}
   .sw-links{margin-top:auto;padding-top:12px;display:flex;gap:14px;font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+  .sw-acc{margin-top:10px;font-size:.8rem;color:var(--gold);font-weight:600}
   .sw-links a{color:var(--sage-deep);text-decoration:none}
   .sw-links a:hover{color:var(--gold)}
   /* ---- TALKS / AWARDS ---- */
@@ -519,7 +520,7 @@
       <button class="fbtn" data-f="prog">In Progress</button>
     </div>
     <div class="publist reveal" id="publist"></div>
-    <p class="pub-note reveal">* corresponding author; † contributed equally to the first author.</p>
+    <p class="pub-note reveal">* corresponding author; † co-first authors (equal contribution).</p>
     <div class="booklist reveal">
       <h3>Book Chapters</h3>
       <ul>
@@ -532,7 +533,7 @@
 <section id="software">
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">05</span><h2>Software</h2></div>
-    <p class="future-lede reveal">Open-source R packages implementing my methods.</p>
+    <p class="future-lede reveal">Open-source R packages implementing my methods, and a data resource. Numbers refer to the publication list above.</p>
     <div class="future-grid reveal">
       <div class="fcard sw">
         <h4><a href="https://github.com/haoyu-yang001/TransSynPALM" target="_blank" rel="noopener">TransSynPALM</a></h4>
@@ -542,32 +543,44 @@
       <div class="fcard sw">
         <h4><a href="https://github.com/haoyu-yang001/SynPALM" target="_blank" rel="noopener">SynPALM</a></h4>
         <p>Synthetic phenotype assisted linear mixed models for proteome-wide genetic discovery in incomplete biobank data.</p>
-        <div class="sw-links"><a href="https://github.com/haoyu-yang001/SynPALM" target="_blank" rel="noopener">GitHub ↗</a></div>
+        <div class="sw-acc">Accompanies [12]</div>
+        <div class="sw-links"><a href="https://github.com/haoyu-yang001/SynPALM" target="_blank" rel="noopener">GitHub ↗</a> <a href="https://doi.org/10.5281/zenodo.21782545" target="_blank" rel="noopener">Zenodo DOI ↗</a></div>
       </div>
       <div class="fcard sw">
         <h4><a href="https://github.com/haoyu-yang001/HEART" target="_blank" rel="noopener">HEART</a></h4>
         <p>Heterogeneity-aware empowerment via adaptive robust transfer.</p>
+        <div class="sw-acc">Accompanies [16]</div>
         <div class="sw-links"><a href="https://github.com/haoyu-yang001/HEART" target="_blank" rel="noopener">GitHub ↗</a> <a href="https://haoyu-yang001.github.io/HEART/" target="_blank" rel="noopener">Docs ↗</a></div>
       </div>
       <div class="fcard sw">
         <h4><a href="https://github.com/haoyu-yang001/TLR" target="_blank" rel="noopener">TLR</a></h4>
         <p>Tail likelihood ratio test for large-scale causal mediation under a composite null hypothesis.</p>
+        <div class="sw-acc">Accompanies [1]</div>
         <div class="sw-links"><a href="https://github.com/haoyu-yang001/TLR" target="_blank" rel="noopener">GitHub ↗</a></div>
       </div>
       <div class="fcard sw">
         <h4><a href="https://github.com/haoyu-yang001/CARM" target="_blank" rel="noopener">CARM</a></h4>
         <p>Covariate-adjusted adaptive randomization via Mahalanobis distance, including multi-arm trials.</p>
+        <div class="sw-acc">Co-author · Accompanies [6] and [9]</div>
         <div class="sw-links"><a href="https://github.com/haoyu-yang001/CARM" target="_blank" rel="noopener">GitHub ↗</a> <a href="https://CRAN.R-project.org/package=CARM" target="_blank" rel="noopener">CRAN ↗</a></div>
       </div>
       <div class="fcard sw">
         <h4><a href="https://github.com/haoyu-yang001/SCR" target="_blank" rel="noopener">SCR</a></h4>
         <p>Sequential covariate-adjusted randomization.</p>
+        <div class="sw-acc">Accompanies [5]</div>
         <div class="sw-links"><a href="https://github.com/haoyu-yang001/SCR" target="_blank" rel="noopener">GitHub ↗</a></div>
       </div>
       <div class="fcard sw">
         <h4><a href="https://github.com/haoyu-yang001/NetRR" target="_blank" rel="noopener">NetRR</a></h4>
         <p>Design of networked experiments via interference balancing.</p>
+        <div class="sw-acc">Accompanies [2]</div>
         <div class="sw-links"><a href="https://github.com/haoyu-yang001/NetRR" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+      <div class="fcard sw">
+        <h4><a href="https://syn-palm.genohub.org" target="_blank" rel="noopener">Syn-PALM results portal</a></h4>
+        <p>Genome-wide summary statistics for 2,916 plasma proteins in 402,086 UK Biobank participants.</p>
+        <div class="sw-acc">Data resource · Accompanies [12]</div>
+        <div class="sw-links"><a href="https://syn-palm.genohub.org" target="_blank" rel="noopener">Portal ↗</a></div>
       </div>
     </div>
   </div>
@@ -624,21 +637,21 @@
 <script>
   const pubs = [
     {n:"[1]", t:"A tail likelihood ratio method for large-scale causal mediation tests in epigenome-wide studies", a:["Yang, H.","Wang, R.†","Lin, Y.","Lin, X.*"], v:"Journal of the American Statistical Association", y:"2026", c:"pub", note:"Accepted"},
-    {n:"[2]", t:"Design strategies for networked experiments via interference balancing", a:["Yang, H.","Qin, Y.","Yu, Y.","Li, Y.*"], v:"Journal of Business &amp; Economic Statistics, 1–31", y:"2026", c:"pub", note:"Accepted", url:"https://www.tandfonline.com/doi/full/10.1080/07350015.2026.2658067"},
-    {n:"[3]", t:"Comparison of variant callers using 60 532 multi-ancestry whole genome sequences", a:["Zhou, H.","Li, Z.","Shyr, D.","Li, X.","Yang, H.","Dey, R.","… Lin, X."], v:"Briefings in Bioinformatics, 27(2): bbag130", y:"2026", c:"pub", url:"https://academic.oup.com/bib/article/27/2/bbag130/8550893"},
-    {n:"[4]", t:"Sequential covariate-adjusted randomization framework", a:["Fang, L.","Qin, Y.","Li, Y.","Yang, H.*"], v:"Statistica Sinica", y:"2026+", c:"rev", note:"Minor revision"},
-    {n:"[5]", t:"Causal mediation analysis for integrating exposure, genomic, and phenotype data", a:["Yang, H.","Liu, Z.","Wang, R.","Lai, E.","Schwartz, J.","Baccarelli, A.","Huang, Y.","Lin, X.*"], v:"Annual Review of Statistics and Its Application, 12: 337–360", y:"2025", c:"pub", url:"https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-040622-031653"},
-    {n:"[6]", t:"Sequential covariate-adjusted randomization via hierarchically minimizing Mahalanobis distance and marginal imbalance", a:["Yang, H.","Qin, Y.†","Li, Y.*","Hu, F."], v:"Biometrics, 80(2): ujae047", y:"2024", c:"pub", url:"https://academic.oup.com/biometrics/article/80/2/ujae047/7683023"},
-    {n:"[7]", t:"Adaptive randomization via Mahalanobis distance", a:["Qin, Y.","Li, Y.","Ma, W.","Yang, H.","Hu, F.*"], v:"Statistica Sinica, 34(1): 353–375", y:"2024", c:"pub", url:"https://www.jstor.org/stable/27280126"},
-    {n:"[8]", t:"Network-adjusted response-adaptive randomization in economic experiment (in Chinese)", a:["Li, Y.","Xie, J.","Qin, Y.","Yang, H.*"], v:"Statistical Research, 40(10): 151–160", y:"2023", c:"pub"},
-    {n:"[9]", t:"Penalized estimating equations for generalized linear models with multiple imputation", a:["Li, Y.","Yang, H.","Yu, H.","Huang, H.","Shen, Y.*"], v:"Annals of Applied Statistics, 17(3): 2345–2363", y:"2023", c:"pub", url:"https://projecteuclid.org/journals/annals-of-applied-statistics/volume-17/issue-3/Penalized-estimating-equations-for-generalized-linear-models-with-multiple-imputation/10.1214/22-AOAS1721.short"},
-    {n:"[10]", t:"Balancing covariates in multi-arm trials via adaptive randomization", a:["Yang, H.","Qin, Y.†","Wang, F.","Li, Y.*","Hu, F."], v:"Computational Statistics &amp; Data Analysis, 179: 107642", y:"2023", c:"pub", url:"https://www.sciencedirect.com/science/article/abs/pii/S0167947322002225"},
-    {n:"[11]", t:"Penalized weighted least squares estimate for variable selection on correlated multiply-imputed data", a:["Li, Y.","Yang, H.","Yu, H.","Huang, H.","Shen, Y.*"], v:"Journal of the Royal Statistical Society Series C, 72(3): 703–717", y:"2023", c:"pub", url:"https://academic.oup.com/jrsssc/article/72/3/703/7140281"},
-    {n:"[12]", t:"Group sequential randomization for split questionnaire design (in Chinese)", a:["Yang, H.","Qin, Y.†","Li, Y.*"], v:"Systems Science and Mathematical Sciences, 42(1): 17–34", y:"2022", c:"pub"},
-    {n:"[13]", t:"Adaptive Weighted Random Isolation (AWRI): a simple design to estimate causal effects under network interference", a:["Yang, H.","Qin, Y.","Shi, C.","Ren, W.","Li, Y.*"], v:"", y:"2026+", c:"rev", note:"Major Revision in IJOC"},
-    {n:"[14]", t:"Estimation of the average treatment and spillover effects in observational studies under general interference", a:["Yang, H.","Qin, Y.","Li, Y.*"], v:"", y:"2026+", c:"rev", note:"Under review"},
-    {n:"[15]", t:"Synthetic phenotype assisted linear mixed models improve proteome-wide genetic discovery in incomplete biobank data", a:["Yang, H.","Wang, R.","Song, S.","Lin, X.*"], v:"", y:"2026+", c:"rev", note:"Major Revision in NC"},
-    {n:"[16]", t:"Transportability-assisted robust genome-wide association studies for empowered target-population inference (TARGET-GWAS)", a:["Yang, H.","Wang, R.","Lin, X.*"], v:"", y:"2026+", c:"prog", note:"In progress"},
+    {n:"[2]", t:"Design strategies for networked experiments via interference balancing", a:["Yang, H.","Qin, Y.","Yu, Y.","Li, Y.*"], v:"Journal of Business &amp; Economic Statistics, 1–14", y:"2026", c:"pub", note:"Published online", url:"https://www.tandfonline.com/doi/full/10.1080/07350015.2026.2658067"},
+    {n:"[3]", t:"Comparison of variant callers using 60,532 multi-ancestry whole genome sequences", a:["Zhou, H.","Li, Z.","Shyr, D.","Li, X.","Yang, H.","Dey, R.","… Lin, X."], v:"Briefings in Bioinformatics, 27(2): bbag130", y:"2026", c:"pub", url:"https://academic.oup.com/bib/article/27/2/bbag130/8550893"},
+    {n:"[4]", t:"Causal mediation analysis for integrating exposure, genomic, and phenotype data", a:["Yang, H.","Liu, Z.","Wang, R.","Lai, E.","Schwartz, J.","Baccarelli, A.","Huang, Y.","Lin, X.*"], v:"Annual Review of Statistics and Its Application, 12: 337–360", y:"2025", c:"pub", url:"https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-040622-031653"},
+    {n:"[5]", t:"Sequential covariate-adjusted randomization via hierarchically minimizing Mahalanobis distance and marginal imbalance", a:["Yang, H.","Qin, Y.†","Li, Y.*","Hu, F."], v:"Biometrics, 80(2): ujae047", y:"2024", c:"pub", url:"https://academic.oup.com/biometrics/article/80/2/ujae047/7683023"},
+    {n:"[6]", t:"Adaptive randomization via Mahalanobis distance", a:["Qin, Y.","Li, Y.","Ma, W.","Yang, H.","Hu, F.*"], v:"Statistica Sinica, 34(1): 353–375", y:"2024", c:"pub", url:"https://www.jstor.org/stable/27280126"},
+    {n:"[7]", t:"Network-adjusted response-adaptive randomization in economic experiments (in Chinese)", a:["Li, Y.","Xie, J.","Qin, Y.","Yang, H.*"], v:"Statistical Research, 40(10): 151–160", y:"2023", c:"pub"},
+    {n:"[8]", t:"Penalized estimating equations for generalized linear models with multiple imputation", a:["Li, Y.","Yang, H.","Yu, H.","Huang, H.","Shen, Y.*"], v:"The Annals of Applied Statistics, 17(3): 2345–2363", y:"2023", c:"pub", url:"https://projecteuclid.org/journals/annals-of-applied-statistics/volume-17/issue-3/Penalized-estimating-equations-for-generalized-linear-models-with-multiple-imputation/10.1214/22-AOAS1721.short"},
+    {n:"[9]", t:"Balancing covariates in multi-arm trials via adaptive randomization", a:["Yang, H.","Qin, Y.†","Wang, F.","Li, Y.*","Hu, F."], v:"Computational Statistics &amp; Data Analysis, 179: 107642", y:"2023", c:"pub", url:"https://www.sciencedirect.com/science/article/abs/pii/S0167947322002225"},
+    {n:"[10]", t:"Penalized weighted least-squares estimate for variable selection on correlated multiply imputed data", a:["Li, Y.","Yang, H.","Yu, H.","Huang, H.","Shen, Y.*"], v:"Journal of the Royal Statistical Society Series C: Applied Statistics, 72(3): 703–717", y:"2023", c:"pub", url:"https://academic.oup.com/jrsssc/article/72/3/703/7140281"},
+    {n:"[11]", t:"Group sequential randomization for split questionnaire design (in Chinese)", a:["Yang, H.","Qin, Y.","Li, Y.*"], v:"Systems Science and Mathematical Sciences, 42(1): 17–34", y:"2022", c:"pub"},
+    {n:"[12]", t:"Synthetic phenotype assisted linear mixed models improve proteome-wide genetic discovery in incomplete biobank data", a:["Yang, H.†","Wang, R.†","Song, S.","Lin, X.*"], v:"Nature Communications", y:"2026+", c:"rev", note:"Major revision"},
+    {n:"[13]", t:"Adaptive weighted random isolation (AWRI): a simple design to estimate causal effects under network interference", a:["Yang, H.","Qin, Y.","Shi, C.","Ren, W.","Li, Y.*"], v:"INFORMS Journal on Computing", y:"2026+", c:"rev", note:"Major revision"},
+    {n:"[14]", t:"Sequential covariate-adjusted randomization framework", a:["Fang, L.","Qin, Y.","Li, Y.","Yang, H.*"], v:"Statistica Sinica", y:"2026+", c:"rev", note:"Minor revision"},
+    {n:"[15]", t:"Estimation of the average treatment and spillover effects in observational studies under general interference", a:["Yang, H.","Qin, Y.","Li, Y.*"], v:"", y:"2026+", c:"rev", note:"Under review"},
+    {n:"[16]", t:"Heterogeneity-aware empowerment via adaptive robust transfer for target-population inference (HEART)", a:["Yang, H.","Wang, R.","Lin, X.*"], v:"", y:"2026+", c:"prog", note:"In preparation"},
   ];
   const badgeMap = {pub:["b-pub","Published"], rev:["b-rev","Under Review"], prog:["b-prog","In Progress"]};
   function authorHTML(arr){
