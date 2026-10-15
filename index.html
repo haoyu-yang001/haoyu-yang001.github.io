@@ -251,6 +251,12 @@
   .booklist ul{list-style:none}
   .booklist li{padding:7px 0;color:var(--ink-soft);font-size:.95rem;position:relative;padding-left:20px}
   .booklist li::before{content:"—";position:absolute;left:0;color:var(--gold)}
+  /* ---- SOFTWARE ---- */
+  .fcard.sw{display:flex;flex-direction:column}
+  .fcard.sw h4 a{color:inherit;text-decoration:none}
+  .sw-links{margin-top:auto;padding-top:12px;display:flex;gap:14px;font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+  .sw-links a{color:var(--sage-deep);text-decoration:none}
+  .sw-links a:hover{color:var(--gold)}
   /* ---- TALKS / AWARDS ---- */
   .two{display:grid;grid-template-columns:1.3fr 1fr;gap:56px}
   .entry{padding:16px 0;border-bottom:1px solid var(--line)}
@@ -332,6 +338,7 @@
       <a href="#education">Education</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
+      <a href="#software">Software</a>
       <a href="#talks">Talks &amp; Awards</a>
       <a href="#life">Life</a>
     </div>
@@ -522,9 +529,52 @@
     </div>
   </div>
 </section>
+<section id="software">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Software</h2></div>
+    <p class="future-lede reveal">Open-source R packages implementing my methods.</p>
+    <div class="future-grid reveal">
+      <div class="fcard sw">
+        <h4><a href="https://github.com/haoyu-yang001/TransSynPALM" target="_blank" rel="noopener">TransSynPALM</a></h4>
+        <p>Transfer learning with synthetic phenotype assisted linear mixed models for genetic discovery in under-represented populations.</p>
+        <div class="sw-links"><a href="https://github.com/haoyu-yang001/TransSynPALM" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+      <div class="fcard sw">
+        <h4><a href="https://github.com/haoyu-yang001/SynPALM" target="_blank" rel="noopener">SynPALM</a></h4>
+        <p>Synthetic phenotype assisted linear mixed models for proteome-wide genetic discovery in incomplete biobank data.</p>
+        <div class="sw-links"><a href="https://github.com/haoyu-yang001/SynPALM" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+      <div class="fcard sw">
+        <h4><a href="https://github.com/haoyu-yang001/HEART" target="_blank" rel="noopener">HEART</a></h4>
+        <p>Heterogeneity-aware empowerment via adaptive robust transfer.</p>
+        <div class="sw-links"><a href="https://github.com/haoyu-yang001/HEART" target="_blank" rel="noopener">GitHub ↗</a> <a href="https://haoyu-yang001.github.io/HEART/" target="_blank" rel="noopener">Docs ↗</a></div>
+      </div>
+      <div class="fcard sw">
+        <h4><a href="https://github.com/haoyu-yang001/TLR" target="_blank" rel="noopener">TLR</a></h4>
+        <p>Tail likelihood ratio test for large-scale causal mediation under a composite null hypothesis.</p>
+        <div class="sw-links"><a href="https://github.com/haoyu-yang001/TLR" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+      <div class="fcard sw">
+        <h4><a href="https://github.com/haoyu-yang001/CARM" target="_blank" rel="noopener">CARM</a></h4>
+        <p>Covariate-adjusted adaptive randomization via Mahalanobis distance, including multi-arm trials.</p>
+        <div class="sw-links"><a href="https://github.com/haoyu-yang001/CARM" target="_blank" rel="noopener">GitHub ↗</a> <a href="https://CRAN.R-project.org/package=CARM" target="_blank" rel="noopener">CRAN ↗</a></div>
+      </div>
+      <div class="fcard sw">
+        <h4><a href="https://github.com/haoyu-yang001/SCR" target="_blank" rel="noopener">SCR</a></h4>
+        <p>Sequential covariate-adjusted randomization.</p>
+        <div class="sw-links"><a href="https://github.com/haoyu-yang001/SCR" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+      <div class="fcard sw">
+        <h4><a href="https://github.com/haoyu-yang001/NetRR" target="_blank" rel="noopener">NetRR</a></h4>
+        <p>Design of networked experiments via interference balancing.</p>
+        <div class="sw-links"><a href="https://github.com/haoyu-yang001/NetRR" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="talks">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">05</span><h2>Talks &amp; Awards &amp; Teaching &amp; Service</h2></div>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Talks &amp; Awards &amp; Teaching &amp; Service</h2></div>
     <div class="two">
       <div class="reveal">
         <div class="subhead">Selected Presentations</div>
@@ -553,7 +603,7 @@
 </section>
 <section id="life">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span><h2>Beyond the Data</h2></div>
+    <div class="sec-head"><span class="sec-num">07</span><h2>Beyond the Data</h2></div>
     <p class="life-lede reveal"><strong>Always in motion — on the water, on the court, on the snow.</strong> Away from the data, I'm happiest when my heart rate is up. I run marathons, play tennis, swim, and carve down ski slopes; I love the rhythm of rowing and the pull of a good race. And because the best moments are shared, I'm all in on team sports too — volleyball, dragon boat, and ultimate frisbee. Whatever the season, I'll keep moving.</p>
   </div>
 </section>
