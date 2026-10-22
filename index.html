@@ -265,6 +265,14 @@
   .entry .et{font-weight:600;font-size:.97rem;line-height:1.4;margin-bottom:3px}
   .entry .em2{font-size:.87rem;color:var(--ink-soft)}
   .entry .ew{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:600;float:right}
+  .news .em2 a{color:var(--sage-deep);text-decoration:none;font-weight:600}
+  .news-icon{color:var(--gold);margin-left:-6px;align-self:center;flex:none;overflow:visible}
+  .news-icon .rays{transform-origin:24px 24px;animation:newsRays 2.4s ease-in-out infinite}
+  .news-icon .spark{transform-origin:24px 22px;animation:newsSpark 2.4s ease-in-out infinite}
+  @keyframes newsRays{0%,100%{opacity:.35;transform:scale(.92)}50%{opacity:1;transform:scale(1.06)}}
+  @keyframes newsSpark{0%,100%{transform:scale(.8) rotate(0deg)}50%{transform:scale(1.15) rotate(45deg)}}
+  @media (prefers-reduced-motion:reduce){.news-icon .rays,.news-icon .spark{animation:none}}
+  .news .em2 a:hover{color:var(--gold)}
   .awd{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);align-items:flex-start}
   .awd:last-child{border-bottom:none}
   .awd .yr{font-family:'Fraunces',serif;font-size:.85rem;color:var(--sage-deep);font-weight:600;white-space:nowrap;padding-top:1px;min-width:72px}
@@ -335,6 +343,7 @@
     <span class="brand">Haoyu Yang</span>
     <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
     <div class="navlinks" id="nl">
+      <a href="#news">News</a>
       <a href="#about">About</a>
       <a href="#education">Education</a>
       <a href="#research">Research</a>
@@ -368,9 +377,30 @@
     </div>
   </div>
 </header>
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Recent News</h2>
+      <svg class="news-icon" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
+        <g class="rays" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <line x1="24" y1="3" x2="24" y2="8"/><line x1="8.4" y1="9.4" x2="11.9" y2="12.9"/>
+          <line x1="39.6" y1="9.4" x2="36.1" y2="12.9"/><line x1="3" y1="24" x2="8" y2="24"/>
+          <line x1="45" y1="24" x2="40" y2="24"/>
+        </g>
+        <path d="M24 12a10 10 0 0 0-6 18c1.3 1 2 2.4 2 4v1h8v-1c0-1.6.7-3 2-4a10 10 0 0 0-6-18z"
+              fill="currentColor" fill-opacity=".18" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M20.5 39h7M21.5 43h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <path class="spark" d="M24 17l1.4 3.6L29 22l-3.6 1.4L24 27l-1.4-3.6L19 22l3.6-1.4z" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="news reveal">
+      <div class="entry"><span class="ew">2026</span><div class="et">Our paper &ldquo;A tail likelihood ratio method for large-scale causal mediation tests in epigenome-wide studies&rdquo; has been accepted in the <em>Journal of the American Statistical Association</em>. 🎉</div><div class="em2">With R. Wang, Y. Lin and X. Lin · Software: <a href="https://github.com/haoyu-yang001/TLR" target="_blank" rel="noopener">TLR ↗</a></div></div>
+      <div class="entry"><span class="ew">2026</span><div class="et">Our paper &ldquo;Design strategies for networked experiments via interference balancing&rdquo; is published online in the <em>Journal of Business &amp; Economic Statistics</em>.</div><div class="em2">With Y. Qin, Y. Yu and Y. Li · <a href="https://www.tandfonline.com/doi/full/10.1080/07350015.2026.2658067" target="_blank" rel="noopener">Read the paper ↗</a> · Software: <a href="https://github.com/haoyu-yang001/NetRR" target="_blank" rel="noopener">NetRR ↗</a></div></div>
+    </div>
+  </div>
+</section>
 <section id="about">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">01</span><h2>About</h2></div>
+    <div class="sec-head"><span class="sec-num">02</span><h2>About</h2></div>
     <div class="about-grid">
       <div class="about reveal">
         <p>I am a <strong>Postdoctoral Research Fellow</strong> in the Department of Biostatistics at the Harvard T.H. Chan School of Public Health, working with <strong>Professor Xihong Lin</strong>.</p>
@@ -407,7 +437,7 @@
 </section>
 <section id="education">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">02</span><h2>Education &amp; Appointment</h2></div>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Education &amp; Appointment</h2></div>
     <div class="timeline reveal">
       <div class="tl-item now">
         <div class="tl-when">Jul 2023 — Present</div>
@@ -432,7 +462,7 @@
 </section>
 <section id="research">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">03</span><h2>Research</h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Research</h2></div>
     <p class="research-lede reveal">Biomedical research routinely discards four critical sources of information: unmeasured samples, excluded populations, the hidden structure of large-scale testing, and the study’s own design. My research builds methodological frameworks for each, united by a single guarantee: <strong>borrowing strength must never cost you the error rate.</strong></p>
 
     <div class="themes themes-4 reveal">
@@ -446,7 +476,7 @@
         <div class="theme-num">02 · Synthetic data</div>
         <h3>AI-generated data is Useful, not necessarily true.</h3>
         <p>90% of a biobank has no proteomic assay but complete genotypes and records. Rather than substituting predictions for data, I model them jointly inside a mixed model — AI model misspecification costs power, never validity.</p>
-        <span class="m">Syn-PALM</span>
+        <span class="m">Syn-PALM &amp; MultiSynSurr</span>
       </div>
       <div class="theme">
         <div class="theme-num">03 · Populations</div>
@@ -483,6 +513,7 @@
         <div class="tags">
           <span class="tag">Genome-wide Association Studies</span>
           <span class="tag">Proteomics &amp; pQTL Discovery</span>
+          <span class="tag">Metabolomics &amp; Nutritional Epidemiology</span>
           <span class="tag">Epigenome-wide Studies</span>
           <span class="tag">Population Biobanks</span>
           <span class="tag">Clinical Trials</span>
@@ -512,7 +543,7 @@
 </section>
 <section id="publications">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">04</span><h2>Publications</h2></div>
+    <div class="sec-head"><span class="sec-num">05</span><h2>Publications</h2></div>
     <div class="pub-filter reveal">
       <button class="fbtn active" data-f="all">All</button>
       <button class="fbtn" data-f="pub">Published</button>
@@ -532,7 +563,7 @@
 </section>
 <section id="software">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">05</span><h2>Software</h2></div>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Software</h2></div>
     <p class="future-lede reveal">Open-source R packages implementing my methods, and a data resource. Numbers refer to the publication list above.</p>
     <div class="future-grid reveal">
       <div class="fcard sw">
@@ -545,6 +576,12 @@
         <p>Synthetic phenotype assisted linear mixed models for proteome-wide genetic discovery in incomplete biobank data.</p>
         <div class="sw-acc">Accompanies [12]</div>
         <div class="sw-links"><a href="https://github.com/haoyu-yang001/SynPALM" target="_blank" rel="noopener">GitHub ↗</a> <a href="https://doi.org/10.5281/zenodo.21782545" target="_blank" rel="noopener">Zenodo DOI ↗</a></div>
+      </div>
+      <div class="fcard sw">
+        <h4>MultiSynSurr</h4>
+        <p>Synthetic surrogate regression with several synthetic phenotypes kept as separate outcomes, for association studies of partially measured outcomes such as metabolites assayed in different sub-studies.</p>
+        <div class="sw-acc">Accompanies [17]</div>
+        <div class="sw-links"><span>GitHub · coming soon</span></div>
       </div>
       <div class="fcard sw">
         <h4><a href="https://github.com/haoyu-yang001/HEART" target="_blank" rel="noopener">HEART</a></h4>
@@ -587,7 +624,7 @@
 </section>
 <section id="talks">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span><h2>Talks &amp; Awards &amp; Teaching &amp; Service</h2></div>
+    <div class="sec-head"><span class="sec-num">07</span><h2>Talks &amp; Awards &amp; Teaching &amp; Service</h2></div>
     <div class="two">
       <div class="reveal">
         <div class="subhead">Presentations</div>
@@ -617,7 +654,7 @@
 </section>
 <section id="life">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">07</span><h2>Beyond the Data</h2></div>
+    <div class="sec-head"><span class="sec-num">08</span><h2>Beyond the Data</h2></div>
     <p class="life-lede reveal"><strong>Always in motion — on the water, on the court, on the snow.</strong> Away from the data, I'm happiest when my heart rate is up. I run marathons, play tennis, swim, and carve down ski slopes; I love the rhythm of rowing and the pull of a good race. And because the best moments are shared, I'm all in on team sports too — volleyball, dragon boat, and ultimate frisbee. Whatever the season, I'll keep moving.</p>
   </div>
 </section>
@@ -653,6 +690,7 @@
     {n:"[14]", t:"Sequential covariate-adjusted randomization framework", a:["Fang, L.","Qin, Y.","Li, Y.","Yang, H.*"], v:"Statistica Sinica", y:"2026+", c:"rev", note:"Minor revision"},
     {n:"[15]", t:"Estimation of the average treatment and spillover effects in observational studies under general interference", a:["Yang, H.","Qin, Y.","Li, Y.*"], v:"", y:"2026+", c:"rev", note:"Under review"},
     {n:"[16]", t:"Heterogeneity-aware empowerment via adaptive robust transfer for target-population inference (HEART)", a:["Yang, H.","Wang, R.","Lin, X.*"], v:"", y:"2026+", c:"prog", note:"In preparation"},
+    {n:"[17]", t:"Synthetic phenotypes from a core metabolite panel improve power for diet–metabolome association studies with partially measured metabolomes", a:["Yang, H.","Xu, B.","Lin, X.*"], v:"", y:"2026+", c:"prog", note:"In preparation"},
   ];
   const badgeMap = {pub:["b-pub","Published"], rev:["b-rev","Under Review"], prog:["b-prog","In Progress"]};
   function authorHTML(arr){
